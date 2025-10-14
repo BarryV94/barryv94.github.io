@@ -337,3 +337,45 @@ body {
         gap: 1rem;
     }
 }
+.download-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 200px;
+}
+
+.download-btn.secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
