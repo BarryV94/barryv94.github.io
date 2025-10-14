@@ -18,13 +18,13 @@
     box-sizing: border-box;
 }
 .hero-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-    transition: opacity 0.8s ease-in-out;
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    border-radius: 10px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    transition: opacity 0.8s ease-in-out !important;
 }
 body {
     font-family: 'Inter', sans-serif;
