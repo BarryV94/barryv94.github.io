@@ -109,5 +109,24 @@
     </footer>
 
     <script src="script.js"></script>
+	<script>
+	const heroImage = document.querySelector('.hero-image');
+
+// Ustawienia
+let currentImage = 1;
+const totalImages = 14; // masz 14 zdj??
+const interval = 2000; // czas w milisekundach (2000 = 2 sekundy)
+
+function changeImage() {
+    currentImage++;
+    if (currentImage > totalImages) {
+        currentImage = 1; // wracamy do pierwszego
+    }
+    heroImage.src = `${currentImage}.jpg`;
+}
+
+// Uruchamiamy zmian? co 2 sekundy
+setInterval(changeImage, interval);
+</script>
 </body>
 </html>
