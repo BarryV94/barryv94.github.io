@@ -17,7 +17,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.hero-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.8s ease-in-out;
+}
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -206,7 +214,6 @@ body {
     border-radius: var(--radius);
 }
 
-/* Features Section */
 .features {
     padding: 100px 0;
     background: var(--surface);
@@ -253,7 +260,6 @@ body {
     color: var(--text-light);
 }
 
-/* Download Section */
 .download {
     padding: 100px 0;
     text-align: center;
@@ -294,7 +300,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Footer */
 .footer {
     background: var(--text);
     color: white;
@@ -316,7 +321,6 @@ body {
     color: #cbd5e1;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
@@ -367,7 +371,6 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Responsywność */
 @media (max-width: 768px) {
     .download-buttons {
         flex-direction: column;
