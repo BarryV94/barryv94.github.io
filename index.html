@@ -17,7 +17,6 @@
             <ul class="nav-menu">
                 <li><a href="#features"></a></li>
                 <li><a href="#download">Aplikacja</a></li>
-                <li><a href="#download">Baza Aplikacji</a></li>
             </ul>
         </div>
     </nav>
@@ -40,9 +39,6 @@
                     <a href="MagazynProduktow.apk" download class="download-btn">
                         Aplikacja
                     </a>
-					<a href="https://github.com/BarryV94/Website/releases/download/baza-01/Baza.zip" target="_blank" class="download-btn secondary">
-					Pobierz bazę
-					</a>
                 </div>
             </div>
         </div>
@@ -81,9 +77,6 @@
                     <a href="MagazynProduktow.apk" download class="download-btn">
                         Aplikacja
                     </a>
-					<a href="https://github.com/BarryV94/Website/releases/download/baza-01/Baza.zip" target="_blank" class="download-btn secondary">
-					Pobierz bazę
-					</a>
                 </div>
             </div>
         </div>
@@ -112,20 +105,18 @@
 	<script>
 	const heroImage = document.querySelector('.hero-image');
 
-// Ustawienia
 let currentImage = 1;
-const totalImages = 14; // masz 14 zdj??
-const interval = 2000; // czas w milisekundach (2000 = 2 sekundy)
+const totalImages = 14;
+const interval = 2000;
 
 function changeImage() {
     currentImage++;
     if (currentImage > totalImages) {
-        currentImage = 1; // wracamy do pierwszego
+        currentImage = 1;
     }
     heroImage.src = `${currentImage}.jpg`;
 }
 
-// Uruchamiamy zmian? co 2 sekundy
 setInterval(changeImage, interval);
 </script>
 </body>
