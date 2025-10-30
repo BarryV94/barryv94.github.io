@@ -46,53 +46,97 @@ const translations = {
         // Privacy Policy
         'privacy.title': 'Privacy Policy',
         'privacy.content': `
-            <p><strong>ShelfNest Privacy Policy</strong></p>
-            
-            <p>This privacy policy applies to the ShelfNest app (hereby referred to as "Application") for mobile devices that was created by (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</p>
+            <h2>Introduction</h2>
+            <p>This Privacy Policy explains what data is collected and how it is used within the "Product Warehouse" mobile application (hereinafter: "Application"), published by Piotr Czechowski (contact: magazynproduktowapp@gmail.com). The Application is available for Android devices.</p>
 
-            <h2>Information Collection and Use</h2>
-            <p>The Application collects information when you download and use it. This information may include:</p>
+            <h2>General Information</h2>
+            <p><strong>Application Owner:</strong></p>
             <ul>
-                <li>Your device's Internet Protocol address (e.g., IP address)</li>
-                <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
-                <li>The time spent on the Application</li>
-                <li>The operating system you use on your mobile device</li>
-            </ul>
-            
-            <p>The Application does not gather precise information about the location of your mobile device.</p>
-            
-            <p>The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.</p>
-
-            <h2>Third Party Access</h2>
-            <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
-            
-            <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
-            <ul>
-                <li>As required by law, such as to comply with a subpoena, or similar legal process;</li>
-                <li>When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
-                <li>With their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+                <li>Application name: Product Warehouse</li>
+                <li>Owner / Data Administrator: Piotr Czechowski</li>
+                <li>Contact email: magazynproduktowapp@gmail.com</li>
+                <li>Country: Poland</li>
             </ul>
 
-            <h2>Opt-Out Rights</h2>
-            <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
+            <h2>What Data We Collect and When</h2>
+            
+            <h3>1. Data voluntarily provided by the user:</h3>
+            <ul>
+                <li>Email address (only when the user decides to contact us or report a problem)</li>
+                <li>Files uploaded to the Application (e.g., import/export of .zip archives) only upon explicit user choice</li>
+                <li>Photos taken with the device camera only if the user grants the app permission and decides to take a photo within the Application's functions</li>
+                <li>Language preferences (language selection in the app)</li>
+            </ul>
 
-            <h2>Data Retention Policy</h2>
-            <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. The Service Provider will retain Automatically Collected information for up to 24 months and thereafter may store it in aggregate. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at magazynproduktowapp@gmail.com and they will respond in a reasonable time.</p>
+            <h3>2. Technical and diagnostic data:</h3>
+            <ul>
+                <li>Device advertising identifier (Advertising ID) and information used by advertising networks to display ads (AdMob)</li>
+                <li>Device and operating system information (e.g., model, Android version), usage statistics (anonymized or aggregated), error logs, and network connection information (online/offline status) collected to ensure Application operation and diagnose problems</li>
+            </ul>
 
-            <h2>Children</h2>
-            <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+            <h3>3. Data collected by third parties (e.g., Google/AdMob):</h3>
+            <p>The Application integrates advertising services (Google AdMob). These services may collect and process data to personalize ads, measure ad effectiveness, and prevent abuse. Details and rules of data processing by third parties are governed by their privacy policies (e.g., Google).</p>
+
+            <h2>Purposes and Legal Bases for Processing</h2>
+            <ul>
+                <li><strong>Displaying ads:</strong> based on explicit user consent (where required) or legitimate interest (for some forms of advertising). Data transmitted to AdMob is used in accordance with Google AdMob policy.</li>
+                <li><strong>Ensuring application functionality:</strong> processing files uploaded by the user, handling export/import based on performing actions at user's request.</li>
+                <li><strong>Diagnostics and quality improvement:</strong> analysis of logs and technical data to fix errors and improve performance - legitimate interest of the administrator.</li>
+                <li><strong>Contact with the user:</strong> based on consent or to perform a justified action (e.g., responding to an error report).</li>
+                <li><strong>Language personalization:</strong> storing app language choice based on legitimate interest of the administrator.</li>
+            </ul>
+
+            <h2>Permissions and Consents</h2>
+            <p>The Application requests access to selected device permissions (e.g., camera, file access). Granting permissions is voluntary; lack of consent may limit some Application functions.</p>
+            <p>If your country requires consent for personalized ads, the Application may display a consent prompt. You can opt out of personalized ads at any time through system settings or Google tools (e.g., ad settings in Google context).</p>
+
+            <h2>Data Storage</h2>
+            <ul>
+                <li>Data from files uploaded by the user is stored locally on the device or, if you save an export, stored in the "Download/ProductWarehouse" directory (or another indicated by the file system). The Application does not automatically transmit these files to external servers.</li>
+                <li>Telemetry and diagnostic data may be stored for the period necessary to achieve the purpose (e.g., up to 90 days for diagnostic logs), unless the law requires a longer retention period.</li>
+                <li>Data transmitted to external providers (e.g., Google AdMob) is stored and processed according to the policies of these providers.</li>
+                <li>Language preferences are stored locally on the user's device.</li>
+            </ul>
+
+            <h2>Sharing Personal Data</h2>
+            <ul>
+                <li>We do not sell or rent personal data to third parties.</li>
+                <li>Data necessary for displaying ads and ad measurement may be shared with advertising platforms (e.g., Google/AdMob) and their advertising and analytics partners.</li>
+                <li>We may also disclose data if required by law (e.g., at the request of law enforcement) or to protect the rights of the application owner.</li>
+            </ul>
+
+            <h2>International Data Transfer</h2>
+            <p>Advertising and analytics services (e.g., Google) may process and store data outside the European Union. Google applies appropriate legal mechanisms (e.g., contractual clauses) to secure data transfer - detailed information can be found in the provider's privacy policy.</p>
+
+            <h2>User Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Request access to your personal data</li>
+                <li>Request correction or deletion of data</li>
+                <li>Object to data processing for marketing purposes</li>
+                <li>Data portability (regarding data in electronic formats)</li>
+                <li>Withdraw consent at any time (if processing is based on consent)</li>
+                <li>Lodge a complaint with a supervisory authority (in Poland: President of the Office for Personal Data Protection)</li>
+            </ul>
 
             <h2>Security</h2>
-            <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information we process and maintain.</p>
+            <p>We apply appropriate technical and organizational measures to protect data against unauthorized access, leakage, modification, and loss. Despite this, no solution guarantees 100% security - we recommend caution when sharing sensitive data.</p>
 
-            <h2>Changes</h2>
-            <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to their Privacy Policy by posting the new Privacy Policy here. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+            <h2>Children's Data</h2>
+            <p>The Application is not directed at children under 13 years of age. We do not knowingly collect personal data from children. If we learn that a child's data has been collected without required parental/guardian permission, we will take steps to delete such data.</p>
 
-            <h2>Your Consent</h2>
-            <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+            <h2>Cookies and Similar Technologies</h2>
+            <p>The Application may use cookie-like technologies (e.g., advertising identifiers) for ad personalization and analytics. Since the Application is a mobile app (not a website), the cookie management mechanism may differ from browser-based ones. In the future, we plan to implement extended consent management features.</p>
 
-            <h2>Contact Us</h2>
-            <p>If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact the Service Provider via email at: magazynproduktowapp@gmail.com</p>
+            <h2>Changes to Privacy Policy</h2>
+            <p>We may update the Privacy Policy. We will inform users of any significant changes by updating the effective date and (if possible) in the app itself.</p>
+
+            <h2>Contact</h2>
+            <p>For questions regarding the privacy policy, please contact:</p>
+            <p>Piotr Czechowski<br>Email: magazynproduktowapp@gmail.com</p>
+
+            <h2>Final Provisions</h2>
+            <p>This policy is informational and does not constitute legal advice. If you need an official, legal document tailored to the specifics of your business (e.g., if you plan to process data more extensively or use additional providers), consider consulting a data protection lawyer.</p>
         `
     },
     pl: {
@@ -141,53 +185,97 @@ const translations = {
         // Privacy Policy
         'privacy.title': 'Polityka Prywatności',
         'privacy.content': `
-            <p><strong>Polityka Prywatności ShelfNest</strong></p>
-            
-            <p>Niniejsza Polityka Prywatności odnosi się do aplikacji mobilnej ShelfNest (zwanej dalej "Aplikacją"), która została utworzona przez (zwanego dalej "Dostawcą Usługi") jako bezpłatna usługa. Usługa jest przeznaczona do użytku "TAK JAK JEST".</p>
+            <h2>Wstęp</h2>
+            <p>Niniejsza Polityka prywatności wyjaśnia, jakie dane są zbierane i w jaki sposób są wykorzystywane w ramach aplikacji mobilnej "Magazyn Produktów" (dalej: „Aplikacja”), której wydawcą jest Piotr Czechowski (kontakt: magazynproduktowapp@gmail.com). Aplikacja jest dostępna na urządzenia z systemem Android.</p>
 
-            <h2>Gromadzenie i wykorzystanie informacji</h2>
-            <p>Aplikacja gromadzi informacje podczas jej pobierania i używania. Informacje te mogą obejmować:</p>
+            <h2>Informacje ogólne</h2>
+            <p><strong>Właściciel aplikacji:</strong></p>
             <ul>
-                <li>Adres protokołu internetowego urządzenia (np. adres IP)</li>
-                <li>Strony Aplikacji, które odwiedzasz, czas i datę wizyty, czas spędzony na tych stronach</li>
-                <li>Czas spędzony w Aplikacji</li>
-                <li>System operacyjny używany na urządzeniu mobilnym</li>
-            </ul>
-            
-            <p>Aplikacja nie gromadzi precyzyjnych informacji o lokalizacji urządzenia mobilnego.</p>
-            
-            <p>Dostawca Usługi może wykorzystywać podane przez Ciebie informacje, aby od czasu do czasu się z Tobą kontaktować w celu przekazywania ważnych informacji, wymaganych powiadomień i promocji marketingowych.</p>
-
-            <h2>Dostęp stron trzecich</h2>
-            <p>Tylko zagregowane, zanonimizowane dane są okresowo przesyłane do usług zewnętrznych w celu pomocy Dostawcy Usługi w ulepszaniu Aplikacji i ich usług. Dostawca Usługi może udostępniać Twoje informacje stronom trzecim w sposób opisany w niniejszym oświadczeniu o ochronie prywatności.</p>
-            
-            <p>Dostawca Usługi może ujawniać informacje dostarczone przez użytkownika i automatycznie gromadzone:</p>
-            <ul>
-                <li>Zgodnie z wymogami prawa, np. w celu wykonania wezwania sądowego lub podobnej procedury prawnej;</li>
-                <li>Kiedy w dobrej wierze uważają, że ujawnienie jest konieczne w celu ochrony ich praw, ochrony Twojego bezpieczeństwa lub bezpieczeństwa innych, zbadania oszustw lub odpowiedzi na żądanie rządowe;</li>
-                <li>Z zaufanymi dostawcami usług, którzy pracują w ich imieniu, nie mają niezależnego wykorzystania informacji, które im ujawniamy i zgodzili się przestrzegać zasad określonych w niniejszym oświadczeniu o ochronie prywatności.</li>
+                <li>Nazwa aplikacji: Magazyn Produktów</li>
+                <li>Właściciel / Administrator danych: Piotr Czechowski</li>
+                <li>Adres e‑mail kontaktowy: magazynproduktowapp@gmail.com</li>
+                <li>Kraj: Polska</li>
             </ul>
 
-            <h2>Prawa do rezygnacji</h2>
-            <p>Możesz łatwo zatrzymać całe gromadzenie informacji przez Aplikację, odinstalowując ją. Możesz użyć standardowych procesów odinstalowywania, które mogą być dostępne jako część urządzenia mobilnego lub za pośrednictwem rynku aplikacji mobilnych lub sieci.</p>
+            <h2>Jakie dane zbieramy i kiedy</h2>
+            
+            <h3>1. Dane przekazywane dobrowolnie przez użytkownika:</h3>
+            <ul>
+                <li>Adres e‑mail (wyłącznie gdy użytkownik zdecyduje się kontaktować z nami lub zgłosić problem)</li>
+                <li>Pliki przesyłane do Aplikacji (np. import/eksport archiwów .zip) tylko po wyraźnym wyborze użytkownika</li>
+                <li>Zdjęcia wykonane aparatem urządzenia tylko jeśli użytkownik nada aplikacji pozwolenie i zdecyduje się zrobić zdjęcie w ramach funkcji Aplikacji</li>
+                <li>Preferencje językowe (wybór języka w aplikacji)</li>
+            </ul>
 
-            <h2>Polityka przechowywania danych</h2>
-            <p>Dostawca Usługi będzie przechowywać dane dostarczone przez użytkownika tak długo, jak używasz Aplikacji i przez rozsądny czas thereafter. Dostawca Usługi będzie przechowywać automatycznie gromadzone informacje do 24 miesięcy, a następnie może przechowywać je w formie zagregowanej. Jeśli chcesz, aby usunęli dane dostarczone przez użytkownika, które podałeś za pośrednictwem Aplikacji, skontaktuj się z nimi pod adresem magazynproduktowapp@gmail.com, a odpowiedzą w rozsądnym czasie.</p>
+            <h3>2. Dane techniczne i diagnostyczne:</h3>
+            <ul>
+                <li>Identyfikator reklamowy urządzenia (Advertising ID) i informacje używane przez sieci reklamowe do wyświetlania reklam (AdMob)</li>
+                <li>Informacje o urządzeniu i systemie operacyjnym (np. model, wersja Android), statystyki użycia (anonimizowane lub agregowane), logi błędów i informacje o połączeniu sieciowym (status online/offline) zbierane w celu zapewnienia działania Aplikacji i diagnostyki problemów</li>
+            </ul>
 
-            <h2>Dzieci</h2>
-            <p>Dostawca Usługi nie używa Aplikacji do celowego pozyskiwania danych od dzieci w wieku poniżej 13 lat lub marketingu skierowanego do nich.</p>
+            <h3>3. Dane zbierane przez podmioty zewnętrzne (np. Google/AdMob):</h3>
+            <p>Aplikacja integruje usługi reklamowe (Google AdMob). Usługi te mogą zbierać i przetwarzać dane w celu personalizacji reklam, pomiaru skuteczności reklam oraz zapobiegania nadużyciom. Szczegóły i zasady przetwarzania danych przez podmioty zewnętrzne reguluje ich polityka prywatności (np. Google).</p>
+
+            <h2>Cele i podstawy prawne przetwarzania</h2>
+            <ul>
+                <li><strong>Wyświetlanie reklam:</strong> na podstawie wyraźnej zgody użytkownika (gdzie wymagana) lub prawnie uzasadnionego interesu (dla niektórych form reklamy). Dane przekazywane do AdMob są wykorzystywane zgodnie z polityką Google AdMob</li>
+                <li><strong>Zapewnienie funkcjonalności aplikacji:</strong> przetwarzanie plików przesłanych przez użytkownika, obsługa eksportu/importu na podstawie wykonania czynności na żądanie użytkownika</li>
+                <li><strong>Diagnostyka i poprawa jakości:</strong> analiza logów i danych technicznych w celu usunięcia błędów i poprawy wydajności - prawnie uzasadniony interes administratora</li>
+                <li><strong>Kontakt z użytkownikiem:</strong> na podstawie zgody lub w celu wykonania uzasadnionej czynności (np. odpowiedź na zgłoszenie błędu)</li>
+                <li><strong>Personalizacja języka:</strong> przechowywanie wyboru języka aplikacji na podstawie prawnie uzasadnionego interesu administratora</li>
+            </ul>
+
+            <h2>Uprawnienia i zgody</h2>
+            <p>Aplikacja prosi o dostęp do wybranych uprawnień urządzenia (np. aparat, dostęp do plików). Nadawanie uprawnień jest dobrowolne, brak zgody może ograniczyć niektóre funkcje Aplikacji.</p>
+            <p>Jeśli w Twoim kraju wymagane jest uzyskanie zgody na spersonalizowane reklamy, Aplikacja może wyświetlać monit o zgodę. Możesz w każdej chwili zrezygnować z spersonalizowanych reklam poprzez ustawienia systemowe lub narzędzia Google (np. ustawienia reklam w kontekście Google).</p>
+
+            <h2>Przechowywanie danych</h2>
+            <ul>
+                <li>Dane plików przesyłanych przez użytkownika są przechowywane lokalnie na urządzeniu lub jeśli zapisujesz eksport zapisywane w katalogu „Pobrane/MagazynProdukty" (lub innym wskazanym przez system plików). Aplikacja nie przesyła automatycznie tych plików na zewnętrzne serwery</li>
+                <li>Dane telemetryczne i diagnostyczne mogą być przechowywane przez okres niezbędny do realizacji celu (np. do 90 dni dla logów diagnostycznych), chyba że prawo wymaga dłuższego okresu przechowywania</li>
+                <li>Dane przekazywane do dostawców zewnętrznych (np. Google AdMob) są przechowywane i przetwarzane zgodnie z politykami tych dostawców</li>
+                <li>Preferencje językowe są przechowywane lokalnie na urządzeniu użytkownika</li>
+            </ul>
+
+            <h2>Udostępnianie danych osobowych</h2>
+            <ul>
+                <li>Nie sprzedajemy ani nie wynajmujemy danych osobowych osób trzecich</li>
+                <li>Dane niezbędne do wyświetlania reklam i pomiaru reklam mogą być udostępniane platformom reklamowym (np. Google/AdMob) oraz ich partnerom reklamowym i analitycznym</li>
+                <li>Możemy też ujawnić dane, jeśli jest to wymagane prawnie (np. na żądanie organów ścigania) lub w celu ochrony praw właściciela aplikacji</li>
+            </ul>
+
+            <h2>Transfer danych międzynarodowy</h2>
+            <p>Usługi reklamowe i analityczne (np. Google) mogą przetwarzać i przechowywać dane poza granicami Unii Europejskiej. Google stosuje odpowiednie mechanizmy prawne (np. klauzule umowne) w celu zabezpieczenia transferu danych - szczegółowe informacje znajdziesz w polityce prywatności dostawcy.</p>
+
+            <h2>Prawa użytkownika</h2>
+            <p>Masz prawo do:</p>
+            <ul>
+                <li>żądania dostępu do swoich danych osobowych</li>
+                <li>żądania sprostowania lub usunięcia danych</li>
+                <li>wniesienia sprzeciwu wobec przetwarzania danych w celach marketingowych</li>
+                <li>przenoszenia danych (dot. danych w formatach elektronicznych)</li>
+                <li>wycofania zgody w dowolnym momencie (jeśli przetwarzanie odbywa się na podstawie zgody)</li>
+                <li>wniesienia skargi do organu nadzorczego (w Polsce: Prezes Urzędu Ochrony Danych Osobowych)</li>
+            </ul>
 
             <h2>Bezpieczeństwo</h2>
-            <p>Dostawca Usługi jest zaniepokojony ochroną poufności Twoich informacji. Dostawca Usługi zapewnia fizyczne, elektroniczne i proceduralne zabezpieczenia w celu ochrony przetwarzanych i utrzymywanych przez nas informacji.</p>
+            <p>Stosujemy odpowiednie środki techniczne i organizacyjne mające na celu ochronę danych przed nieautoryzowanym dostępem, wyciekiem, modyfikacją oraz utratą. Pomimo tego żadne rozwiązanie nie gwarantuje 100% bezpieczeństwa - zalecamy ostrożność przy udostępnianiu danych wrażliwych.</p>
 
-            <h2>Zmiany</h2>
-            <p>Niniejsza Polityka Prywatności może być od czasu do czasu aktualizowana z jakiegokolwiek powodu. Dostawca Usługi powiadomi Cię o wszelkich zmianach w ich Polityce Prywatności, publikując nową Politykę Prywatności tutaj. Zaleca się regularne zapoznawanie się z tą Polityką Prywatności pod kątem wszelkich zmian, ponieważ dalsze używanie jest uznawane za zatwierdzenie wszystkich zmian.</p>
+            <h2>Dane dzieci</h2>
+            <p>Aplikacja nie jest skierowana do dzieci poniżej 13 roku życia. Nie zbieramy świadomie danych osobowych dzieci. Jeśli dowiemy się, że zebrano dane dziecka bez wymaganego zezwolenia rodzica/opiekuna, podejmiemy działania mające na celu usunięcie takich danych.</p>
 
-            <h2>Twoja zgoda</h2>
-            <p>Korzystając z Aplikacji, wyrażasz zgodę na przetwarzanie Twoich informacji zgodnie z niniejszą Polityką Prywatności obecnie i w formie zmienionej przez nas.</p>
+            <h2>Pliki cookies i podobne technologie</h2>
+            <p>Aplikacja może korzystać z technologii podobnych do cookie (np. identyfikatorów reklamowych) w celu personalizacji reklam i analityki. Ponieważ Aplikacja jest aplikacją mobilną (nie stroną www), mechanizm zarządzania cookie może różnić się od przeglądarkowego. W przyszłości planujemy wdrożyć rozszerzone funkcje zarządzania zgodami (consent).</p>
 
-            <h2>Skontaktuj się z nami</h2>
-            <p>Jeśli masz jakiekolwiek pytania dotyczące prywatności podczas korzystania z Aplikacji lub masz pytania dotyczące naszych praktyk, skontaktuj się z Dostawcą Usługi pocztą e-mail pod adresem: magazynproduktowapp@gmail.com</p>
+            <h2>Zmiany w Polityce prywatności</h2>
+            <p>Politykę prywatności możemy aktualizować. O wszelkich istotnych zmianach poinformujemy użytkowników poprzez aktualizację daty wejścia w życie i (jeśli to możliwe) w samej aplikacji.</p>
+
+            <h2>Kontakt</h2>
+            <p>W razie pytań dotyczących polityki prywatności prosimy o kontakt:</p>
+            <p>Piotr Czechowski<br>e‑mail: magazynproduktowapp@gmail.com</p>
+
+            <h2>Postanowienia końcowe</h2>
+            <p>Niniejsza polityka ma charakter informacyjny i nie stanowi porady prawnej. Jeśli potrzebujesz oficjalnego, prawniczego dokumentu dopasowanego do specyfiki działalności (np. jeżeli planujesz przetwarzać dane w większym zakresie lub korzystać z dodatkowych dostawców), rozważ konsultację z prawnikiem ds. ochrony danych osobowych.</p>
         `
     }
 };

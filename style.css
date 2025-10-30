@@ -83,7 +83,6 @@ body {
 
 .nav-container {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 1rem 20px;
     display: flex;
     justify-content: space-between;
@@ -206,7 +205,6 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
 }
 
 .gradient-text {
@@ -219,7 +217,6 @@ body {
 .hero-description {
     font-size: 1.25rem;
     color: var(--text-light);
-    margin-bottom: 2rem;
 }
 
 .app-info {
@@ -227,6 +224,7 @@ body {
     padding: 2rem;
     border-radius: var(--radius);
     margin: 2rem 0;
+	margin-bottom:0px !important;
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
 }
