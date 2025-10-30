@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatno?ci - ShelfNest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4DB6AC;
+            --primary-dark: #3a8a83;
+            --secondary: #FF9800;
+            --dark: #1a1a2e;
+            --darker: #16213e;
+            --light: #f8f9fa;
+            --text: #333333;
+            --text-light: #666666;
+            --border: #e0e0e0;
+            --radius: 10px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #790000, #ff0000);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #790000, #ff0000);
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .privacy-container {
+            max-width: 1000px;
+            margin: 120px auto 50px;
+            padding: 0 20px;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .privacy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .privacy-meta {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .privacy-content {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .privacy-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .privacy-section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.5rem 0;
+            color: var(--text);
+        }
+        
+        .privacy-section p, .privacy-section li {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-section ul {
+            padding-left: 1.5rem;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-bottom: 2rem;
+        }
+        
+        .back-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .highlight {
+            background: var(--gradient);
+            padding: 2rem;
+            border-radius: var(--radius);
+            color: white;
+            margin: 2rem 0;
+        }
+        
+        .highlight h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .language-switcher {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .language-btn {
+            padding: 0.5rem 1rem;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            margin: 0 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .language-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .language-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .footer {
+            background: var(--darker);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3, .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .privacy-title {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-boxes"></i></span>
+                ShelfNest
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Strona G?車wna</a></li>
+                <li><a href="index.html#features">Funkcje</a></li>
+                <li><a href="index.html#download">Pobierz</a></li>
+                <li><a href="index.html#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="privacy-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Powr車t do strony g?車wnej
+        </a>
+
+        <div class="language-switcher">
+            <button class="language-btn active" onclick="switchLanguage('pl')">Polski</button>
+            <button class="language-btn" onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <div id="polish-version">
+            <div class="privacy-header">
+                <h1 class="privacy-title">Polityka Prywatno?ci</h1>
+                <div class="privacy-meta">
+                    <strong>Aplikacja "ShelfNest"</strong><br>
+                    Wersja: 2.0 | Data wej?cia w ?ycie: 10-10-2025
+                </div>
+            </div>
+
+            <div class="privacy-content">
+                <section class="privacy-section">
+                    <h2>Wst?p</h2>
+                    <p>Niniejsza Polityka prywatno?ci wyja?nia, jakie dane s? zbierane i w jaki spos車b s? wykorzystywane w ramach aplikacji mobilnej "ShelfNest" (dalej: ?Aplikacja§), kt車rej wydawc? jest Piotr Czechowski (kontakt: magazynproduktowapp@gmail.com). Aplikacja jest dost?pna na urz?dzenia z systemem Android.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Informacje og車lne</h2>
+                    <div class="highlight">
+                        <h3>W?a?ciciel aplikacji:</h3>
+                        <ul>
+                            <li><strong>Nazwa aplikacji:</strong> ShelfNest</li>
+                            <li><strong>W?a?ciciel / Administrator danych:</strong> Piotr Czechowski</li>
+                            <li><strong>Adres e?mail kontaktowy:</strong> magazynproduktowapp@gmail.com</li>
+                            <li><strong>Kraj:</strong> Polska</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Jakie dane zbieramy i kiedy</h2>
+                    
+                    <h3>1. Dane przekazywane dobrowolnie przez u?ytkownika:</h3>
+                    <ul>
+                        <li>Adres e?mail (wy??cznie gdy u?ytkownik zdecyduje si? kontaktowa? z nami lub zg?osi? problem)</li>
+                        <li>Pliki przesy?ane do Aplikacji (np. import/eksport archiw車w .zip) tylko po wyra?nym wyborze u?ytkownika</li>
+                        <li>Zdj?cia wykonane aparatem urz?dzenia tylko je?li u?ytkownik nada aplikacji pozwolenie i zdecyduje si? zrobi? zdj?cie w ramach funkcji Aplikacji</li>
+                        <li>Preferencje j?zykowe (wyb車r j?zyka w aplikacji)</li>
+                    </ul>
+
+                    <h3>2. Dane techniczne i diagnostyczne:</h3>
+                    <ul>
+                        <li>Identyfikator reklamowy urz?dzenia (Advertising ID) i informacje u?ywane przez sieci reklamowe do wy?wietlania reklam (AdMob)</li>
+                        <li>Informacje o urz?dzeniu i systemie operacyjnym (np. model, wersja Android), statystyki u?ycia (anonimizowane lub agregowane), logi b??d車w i informacje o po??czeniu sieciowym (status online/offline) zbierane w celu zapewnienia dzia?ania Aplikacji i diagnostyki problem車w</li>
+                    </ul>
+
+                    <h3>3. Dane zbierane przez podmioty zewn?trzne (np. Google/AdMob):</h3>
+                    <p>Aplikacja integruje us?ugi reklamowe (Google AdMob). Us?ugi te mog? zbiera? i przetwarza? dane w celu personalizacji reklam, pomiaru skuteczno?ci reklam oraz zapobiegania nadu?yciom. Szczeg車?y i zasady przetwarzania danych przez podmioty zewn?trzne reguluje ich polityka prywatno?ci (np. Google).</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Cele i podstawy prawne przetwarzania</h2>
+                    <ul>
+                        <li><strong>Wy?wietlanie reklam:</strong> na podstawie wyra?nej zgody u?ytkownika (gdzie wymagana) lub prawnie uzasadnionego interesu (dla niekt車rych form reklamy). Dane przekazywane do AdMob s? wykorzystywane zgodnie z polityk? Google AdMob</li>
+                        <li><strong>Zapewnienie funkcjonalno?ci aplikacji:</strong> przetwarzanie plik車w przes?anych przez u?ytkownika, obs?uga eksportu/importu na podstawie wykonania czynno?ci na ??danie u?ytkownika</li>
+                        <li><strong>Diagnostyka i poprawa jako?ci:</strong> analiza log車w i danych technicznych w celu usuni?cia b??d車w i poprawy wydajno?ci prawnie uzasadniony interes administratora</li>
+                        <li><strong>Kontakt z u?ytkownikiem:</strong> na podstawie zgody lub w celu wykonania uzasadnionej czynno?ci (np. odpowied? na zg?oszenie b??du)</li>
+                        <li><strong>Personalizacja j?zyka:</strong> przechowywanie wyboru j?zyka aplikacji na podstawie prawnie uzasadnionego interesu administratora</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Uprawnienia i zgody</h2>
+                    <p>Aplikacja prosi o dost?p do wybranych uprawnie里 urz?dzenia (np. aparat, dost?p do plik車w). Nadawanie uprawnie里 jest dobrowolne, brak zgody mo?e ograniczy? niekt車re funkcje Aplikacji.</p>
+                    <p>Je?li w Twoim kraju wymagane jest uzyskanie zgody na spersonalizowane reklamy, Aplikacja mo?e wy?wietla? monit o zgod?. Mo?esz w ka?dej chwili zrezygnowa? z spersonalizowanych reklam poprzez ustawienia systemowe lub narz?dzia Google (np. ustawienia reklam w kontek?cie Google).</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Przechowywanie danych</h2>
+                    <ul>
+                        <li>Dane plik車w przesy?anych przez u?ytkownika s? przechowywane lokalnie na urz?dzeniu lub je?li zapisujesz eksport zapisywane w katalogu ?Pobrane/MagazynProdukty(lub innym wskazanym przez system plik車w). Aplikacja nie przesy?a automatycznie tych plik車w na zewn?trzne serwery</li>
+                        <li>Dane telemetryczne i diagnostyczne mog? by? przechowywane przez okres niezb?dny do realizacji celu (np. do 90 dni dla log車w diagnostycznych), chyba ?e prawo wymaga d?u?szego okresu przechowywania</li>
+                        <li>Dane przekazywane do dostawc車w zewn?trznych (np. Google AdMob) s? przechowywane i przetwarzane zgodnie z politykami tych dostawc車w</li>
+                        <li>Preferencje j?zykowe s? przechowywane lokalnie na urz?dzeniu u?ytkownika</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Udost?pnianie danych osobowych</h2>
+                    <ul>
+                        <li>Nie sprzedajemy ani nie wynajmujemy danych osobowych os車b trzecich</li>
+                        <li>Dane niezb?dne do wy?wietlania reklam i pomiaru reklam mog? by? udost?pniane platformom reklamowym (np. Google/AdMob) oraz ich partnerom reklamowym i analitycznym</li>
+                        <li>Mo?emy te? ujawni? dane, je?li jest to wymagane prawnie (np. na ??danie organ車w ?cigania) lub w celu ochrony praw w?a?ciciela aplikacji</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Transfer danych mi?dzynarodowy</h2>
+                    <p>Us?ugi reklamowe i analityczne (np. Google) mog? przetwarza? i przechowywa? dane poza granicami Unii Europejskiej. Google stosuje odpowiednie mechanizmy prawne (np. klauzule umowne) w celu zabezpieczenia transferu danych szczeg車?owe informacje znajdziesz w polityce prywatno?ci dostawcy.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Prawa u?ytkownika</h2>
+                    <p>Masz prawo do:</p>
+                    <ul>
+                        <li>??dania dost?pu do swoich danych osobowych</li>
+                        <li>??dania sprostowania lub usuni?cia danych</li>
+                        <li>wniesienia sprzeciwu wobec przetwarzania danych w celach marketingowych</li>
+                        <li>przenoszenia danych (dot. danych w formatach elektronicznych)</li>
+                        <li>wycofania zgody w dowolnym momencie (je?li przetwarzanie odbywa si? na podstawie zgody)</li>
+                        <li>wniesienia skargi do organu nadzorczego (w Polsce: Prezes Urz?du Ochrony Danych Osobowych)</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Bezpiecze里stwo</h2>
+                    <p>Stosujemy odpowiednie ?rodki techniczne i organizacyjne maj?ce na celu ochron? danych przed nieautoryzowanym dost?pem, wyciekiem, modyfikacj? oraz utrat?. Pomimo tego ?adne rozwi?zanie nie gwarantuje 100% bezpiecze里stwa zalecamy ostro?no?? przy udost?pnianiu danych wra?liwych.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Dane dzieci</h2>
+                    <p>Aplikacja nie jest skierowana do dzieci poni?ej 13 roku ?ycia. Nie zbieramy ?wiadomie danych osobowych dzieci. Je?li dowiemy si?, ?e zebrano dane dziecka bez wymaganego zezwolenia rodzica/opiekuna, podejmiemy dzia?ania maj?ce na celu usuni?cie takich danych.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Pliki cookies i podobne technologie</h2>
+                    <p>Aplikacja mo?e korzysta? z technologii podobnych do cookie (np. identyfikator車w reklamowych) w celu personalizacji reklam i analityki. Poniewa? Aplikacja jest aplikacj? mobiln? (nie stron? www), mechanizm zarz?dzania cookie mo?e r車?ni? si? od przegl?darkowego. W przysz?o?ci planujemy wdro?y? rozszerzone funkcje zarz?dzania zgodami (consent).</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Zmiany w Polityce prywatno?ci</h2>
+                    <p>Polityk? prywatno?ci mo?emy aktualizowa?. O wszelkich istotnych zmianach poinformujemy u?ytkownik車w poprzez aktualizacj? daty wej?cia w ?ycie i (je?li to mo?liwe) w samej aplikacji.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Kontakt</h2>
+                    <p>W razie pyta里 dotycz?cych polityki prywatno?ci prosimy o kontakt:</p>
+                    <div class="highlight">
+                        <p><strong>Piotr Czechowski</strong><br>
+                        <strong>e?mail:</strong> magazynproduktowapp@gmail.com</p>
+                    </div>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Postanowienia ko里cowe</h2>
+                    <p>Niniejsza polityka ma charakter informacyjny i nie stanowi porady prawnej. Je?li potrzebujesz oficjalnego, prawniczego dokumentu dopasowanego do specyfiki dzia?alno?ci (np. je?eli planujesz przetwarza? dane w wi?kszym zakresie lub korzysta? z dodatkowych dostawc車w), rozwa? konsultacj? z prawnikiem ds. ochrony danych osobowych.</p>
+                </section>
+            </div>
+        </div>
+
+        <div id="english-version" style="display: none;">
+            <div class="privacy-header">
+                <h1 class="privacy-title">Privacy Policy</h1>
+                <div class="privacy-meta">
+                    <strong>Application "Product Warehouse"</strong><br>
+                    Version: 2.0 | Effective Date: 10-10-2025
+                </div>
+            </div>
+
+            <div class="privacy-content">
+                <section class="privacy-section">
+                    <h2>Introduction</h2>
+                    <p>This Privacy Policy explains what data is collected and how it is used within the mobile application "Product Warehouse" (hereinafter: "Application"), published by Piotr Czechowski (contact: magazynproduktowapp@gmail.com). The application is available for Android devices.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>General Information</h2>
+                    <div class="highlight">
+                        <h3>Application Owner:</h3>
+                        <ul>
+                            <li><strong>Application Name:</strong> Product Warehouse</li>
+                            <li><strong>Owner / Data Controller:</strong> Piotr Czechowski</li>
+                            <li><strong>Contact Email:</strong> magazynproduktowapp@gmail.com</li>
+                            <li><strong>Country:</strong> Poland</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>What Data We Collect and When</h2>
+                    
+                    <h3>1. Data voluntarily provided by the user:</h3>
+                    <ul>
+                        <li>Email address (only when the user decides to contact us or report a problem)</li>
+                        <li>Files uploaded to the Application (e.g., import/export of .zip archives) only upon explicit user choice</li>
+                        <li>Photos taken with the device camera only if the user grants the application permission and decides to take a photo within the Application's functions</li>
+                        <li>Language preferences (language selection in the application)</li>
+                    </ul>
+
+                    <h3>2. Technical and diagnostic data:</h3>
+                    <ul>
+                        <li>Device advertising identifier (Advertising ID) and information used by advertising networks to display ads (AdMob)</li>
+                        <li>Information about the device and operating system (e.g., model, Android version), usage statistics (anonymized or aggregated), error logs and network connection information (online/offline status) collected to ensure Application operation and problem diagnostics</li>
+                    </ul>
+
+                    <h3>3. Data collected by third parties (e.g., Google/AdMob):</h3>
+                    <p>The application integrates advertising services (Google AdMob). These services may collect and process data for ad personalization, ad effectiveness measurement, and abuse prevention. Details and rules for data processing by third parties are governed by their privacy policies (e.g., Google).</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Purposes and Legal Bases for Processing</h2>
+                    <ul>
+                        <li><strong>Displaying ads:</strong> based on explicit user consent (where required) or legitimate interest (for some forms of advertising). Data transmitted to AdMob is used in accordance with Google AdMob policy</li>
+                        <li><strong>Providing application functionality:</strong> processing files uploaded by the user, handling export/import based on performing actions at the user's request</li>
+                        <li><strong>Diagnostics and quality improvement:</strong> analysis of logs and technical data to fix errors and improve performance - legitimate interest of the controller</li>
+                        <li><strong>Contact with the user:</strong> based on consent or to perform a justified action (e.g., response to an error report)</li>
+                        <li><strong>Language personalization:</strong> storing application language choice based on legitimate interest of the controller</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Permissions and Consents</h2>
+                    <p>The application requests access to selected device permissions (e.g., camera, file access). Granting permissions is voluntary; lack of consent may limit some Application functions.</p>
+                    <p>If your country requires obtaining consent for personalized ads, the Application may display a consent prompt. You can opt out of personalized ads at any time through system settings or Google tools (e.g., ad settings in the Google context).</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Data Storage</h2>
+                    <ul>
+                        <li>Data from files uploaded by the user is stored locally on the device or, if you save an export, in the "Downloads/ProductWarehouse" directory (or another indicated by the file system). The application does not automatically transfer these files to external servers</li>
+                        <li>Telemetry and diagnostic data may be stored for the period necessary to achieve the purpose (e.g., up to 90 days for diagnostic logs), unless the law requires a longer storage period</li>
+                        <li>Data transmitted to external providers (e.g., Google AdMob) is stored and processed according to the policies of those providers</li>
+                        <li>Language preferences are stored locally on the user's device</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Sharing Personal Data</h2>
+                    <ul>
+                        <li>We do not sell or rent personal data to third parties</li>
+                        <li>Data necessary for displaying ads and measuring ad performance may be shared with advertising platforms (e.g., Google/AdMob) and their advertising and analytics partners</li>
+                        <li>We may also disclose data if required by law (e.g., at the request of law enforcement) or to protect the rights of the application owner</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>International Data Transfer</h2>
+                    <p>Advertising and analytics services (e.g., Google) may process and store data outside the European Union. Google applies appropriate legal mechanisms (e.g., contractual clauses) to secure data transfer. Detailed information can be found in the provider's privacy policy.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>User Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>request access to your personal data</li>
+                        <li>request correction or deletion of data</li>
+                        <li>object to data processing for marketing purposes</li>
+                        <li>data portability (regarding data in electronic formats)</li>
+                        <li>withdraw consent at any time (if processing is based on consent)</li>
+                        <li>lodge a complaint with a supervisory authority (in Poland: President of the Office for Personal Data Protection)</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Security</h2>
+                    <p>We apply appropriate technical and organizational measures to protect data against unauthorized access, leakage, modification, and loss. Despite this, no solution guarantees 100% security; we recommend caution when sharing sensitive data.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Children's Data</h2>
+                    <p>The application is not directed at children under 13 years of age. We do not knowingly collect personal data from children. If we learn that a child's data has been collected without the required parental/guardian consent, we will take steps to delete such data.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Cookies and Similar Technologies</h2>
+                    <p>The application may use technologies similar to cookies (e.g., advertising identifiers) for ad personalization and analytics. Since the Application is a mobile application (not a website), the cookie management mechanism may differ from browser-based ones. We plan to implement extended consent management features in the future.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Changes to the Privacy Policy</h2>
+                    <p>We may update the Privacy Policy. We will notify users of any significant changes by updating the effective date and (if possible) in the application itself.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Contact</h2>
+                    <p>For questions regarding the privacy policy, please contact:</p>
+                    <div class="highlight">
+                        <p><strong>Piotr Czechowski</strong><br>
+                        <strong>Email:</strong> magazynproduktowapp@gmail.com</p>
+                    </div>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>Final Provisions</h2>
+                    <p>This policy is informational and does not constitute legal advice. If you need an official legal document tailored to the specifics of your business (e.g., if you plan to process data on a larger scale or use additional providers), consider consulting with a data protection lawyer.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShelfNest</h3>
+                <p>Zaawansowane narz?dzie do zarz?dzania inwestycjami</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>email: magazynproduktowapp@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Informacje</h4>
+                <p><a href="privacy.html" style="color: #cbd5e1;">Polityka prywatno?ci (ShelfNest)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            const polishVersion = document.getElementById('polish-version');
+            const englishVersion = document.getElementById('english-version');
+            const buttons = document.querySelectorAll('.language-btn');
+            
+            if (lang === 'pl') {
+                polishVersion.style.display = 'block';
+                englishVersion.style.display = 'none';
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+            } else {
+                polishVersion.style.display = 'none';
+                englishVersion.style.display = 'block';
+                buttons[0].classList.remove('active');
+                buttons[1].classList.add('active');
+            }
+        }
+
+        // Set default language based on browser language
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('pl')) {
+            switchLanguage('pl');
+        } else {
+            switchLanguage('en');
+        }
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(121, 0, 0, 0.98)';
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, #790000, #ff0000)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
