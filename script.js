@@ -134,9 +134,6 @@ const translations = {
             <h2>Contact</h2>
             <p>For questions regarding the privacy policy, please contact:</p>
             <p>Piotr Czechowski<br>Email: magazynproduktowapp@gmail.com</p>
-
-            <h2>Final Provisions</h2>
-            <p>This policy is informational and does not constitute legal advice. If you need an official, legal document tailored to the specifics of your business (e.g., if you plan to process data more extensively or use additional providers), consider consulting a data protection lawyer.</p>
         `
     },
     pl: {
@@ -273,9 +270,6 @@ const translations = {
             <h2>Kontakt</h2>
             <p>W razie pytań dotyczących polityki prywatności prosimy o kontakt:</p>
             <p>Piotr Czechowski<br>e‑mail: magazynproduktowapp@gmail.com</p>
-
-            <h2>Postanowienia końcowe</h2>
-            <p>Niniejsza polityka ma charakter informacyjny i nie stanowi porady prawnej. Jeśli potrzebujesz oficjalnego, prawniczego dokumentu dopasowanego do specyfiki działalności (np. jeżeli planujesz przetwarzać dane w większym zakresie lub korzystać z dodatkowych dostawców), rozważ konsultację z prawnikiem ds. ochrony danych osobowych.</p>
         `
     }
 };
