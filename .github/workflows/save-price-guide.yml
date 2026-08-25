@@ -1,0 +1,115 @@
+name: Save Cardmarket price guide daily (ensure today's file exists
+
+permissions:
+  contents: write
+
+# Uruchamiaj RAZ dziennie (UTC 05:00) + możliwość ręcznego uruchomienia.
+# Druge zadanie uruchamia dispatch do innych repo o 05:15 UTC.
+on:
+  schedule:
+    - cron: '0 7 * * *'    # codziennie o 07:00 UTC -> Save job   # codziennie o 05:15 UTC -> Dispatch job
+  workflow_dispatch: {}
+
+jobs:
+  save:
+    name: Save today's price guide
+    runs-on: ubuntu-latest
+    # jawne uprawnienia na poziomie joba (opcjonalne, tu zgodne z workflow)
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run save script
+        run: python3 scripts/save_price_guide.py
+
+      - name: Commit & push (only if new files)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/price_guides_* || true
+          git diff --staged --quiet || (git commit -m "Add price_guide_6: $(date -u +'%Y-%m-%d %H:%M UTC')" && git push)
+
+  dispatch:
+    name: Trigger workflows in target repos
+    runs-on: ubuntu-latest
+    # ten job nie potrzebuje zapisu do repo — ograniczamy uprawnienia
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check token
+        run: |
+          if [ -z "${{ secrets.REPO_DISPATCH_TOKEN }}" ]; then
+            echo "Secret REPO_DISPATCH_TOKEN is not set!"; exit 1
+          fi
+
+      - name: Trigger workflows in target repos
+        env:
+          TOKEN: ${{ secrets.REPO_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          
+          repos=(
+            "BarryV94/MTG"
+            "BarryV94/Battlespiritsaga"
+            "BarryV94/Dragonballsuper"
+            "BarryV94/Pokemon"
+            "BarryV94/Accessories"
+            "BarryV94/Cardfightvanguard"
+            "BarryV94/Digimon"
+            "BarryV94/Dragonborne"
+            "BarryV94/Finalfantasy"
+            "BarryV94/Fleshandblood"
+            "BarryV94/Forceofwill"
+            "BarryV94/Lorcana"
+            "BarryV94/Mylittlepony"
+            "BarryV94/Onepiece"
+            "BarryV94/Riftbound"
+            "BarryV94/Starwarsdestiny"
+            "BarryV94/Starwarsunlimited"
+            "BarryV94/Thespoils"
+            "BarryV94/Wei-schwarz"
+            "BarryV94/Wowtcg"
+            "BarryV94/Yugioh"
+          )
+
+          failures=0
+
+          for r in "${repos[@]}"; do
+            workflow_file="save-price-guide.yml"
+            ref="main"
+
+            # wyjątek dla repo Wartosci-walut
+            if [ "$r" == "BarryV94/Wartosci-walut" ]; then
+              workflow_file="save-nbp-rates.yml"
+            fi
+
+            echo "Triggering $r -> workflow ${workflow_file} on ref ${ref} ..."
+            resp=$(curl -s -o /dev/stderr -w "%{http_code}" -X POST \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Authorization: token ${TOKEN}" \
+              https://api.github.com/repos/${r}/actions/workflows/${workflow_file}/dispatches \
+              -d "{\"ref\":\"${ref}\"}")
+
+            if [ "$resp" != "204" ]; then
+              echo " -> FAILED for ${r} (http ${resp})"
+              failures=$((failures+1))
+            else
+              echo " -> OK"
+            fi
+            sleep 1
+          done
+
+          if [ "$failures" -ne 0 ]; then
+            echo "There were ${failures} failures."; exit 1
+          fi
