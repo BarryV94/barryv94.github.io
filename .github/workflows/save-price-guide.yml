@@ -29,9 +29,6 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run save script
-        run: python3 scripts/save_price_guide.py
-
       - name: Commit & push (only if new files)
         run: |
           git config user.name "github-actions[bot]"
