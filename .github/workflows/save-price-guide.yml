@@ -1,43 +1,14 @@
-name: Save Cardmarket price guide daily
+name: Dispatch Cardmarket price guide workflows
 
 permissions:
-  contents: write
+  contents: read
 
-# Uruchamiaj raz dziennie o 07:00 UTC + możliwość ręcznego uruchomienia.
 on:
   schedule:
     - cron: '0 7 * * *'
   workflow_dispatch: {}
 
 jobs:
-  save:
-    name: Save today's price guide
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Commit & push (only if new files)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add docs/price_guides_* || true
-
-          git diff --staged --quiet || \
-            (git commit -m "Add price_guide_6: $(date -u +'%Y-%m-%d %H:%M UTC')" && git push)
-
   dispatch:
     name: Trigger workflows in target repos
     runs-on: ubuntu-latest
@@ -87,9 +58,8 @@ jobs:
 
           for r in "${repos[@]}"; do
 
-            # Nie uruchamiaj workflow w repozytorium,
-            # w którym aktualnie znajduje się ten workflow.
-            if [ "$r" == "${{ github.repository }}" ]; then
+            # Pomijamy repozytorium, w którym znajduje się ten workflow.
+            if [ "$r" = "${{ github.repository }}" ]; then
               echo "Skipping current repository: $r"
               continue
             fi
@@ -97,7 +67,7 @@ jobs:
             workflow_file="save-price-guide.yml"
             ref="main"
 
-            echo "Triggering $r -> workflow ${workflow_file} on ref ${ref} ..."
+            echo "Triggering $r -> $workflow_file on $ref ..."
 
             resp=$(curl -s \
               -o /dev/stderr \
